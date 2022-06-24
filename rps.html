@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+  <meta name="author" content="Lester Carpenter">
+  <meta name="description"
+    content="Lester Carpenter's HTML and CSS skills assessments from The Odin Project and MDN Web Docs.">
+  <meta name="rating" content="General">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/odin-project-styles/odin.css">
+  <link rel="canonical" href="https://lester-carpenter.lsystemworks.com/">
+
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" href="../android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://lester-carpenter.lsystemworks.com/images/lester-960px.jpg">
+  <meta property="og:title" content="Lester's HTML and CSS skills assessments site.">
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="A GREAT place to assess Lester Carpenter's MDN Web Docs, LinkedIn Learning, and Odin Project skills.">
+  <meta property="og:url" content="https://lester-carpenter.lsystemworks.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@self_teach_dev">
+  <meta name="pinterest" content="nopin">
+
+  <title>Lester Carpenter's Odin Project JS Assessments | Rock Paper Scissor App</title>
+  <script type="application/ld+json">
+			{
+				"@context"	: "https://schema.org",
+				"@type" 		: "Organization",
+				"url"				: "https://lester-carpenter.lsystemworks.com",
+				"logo"			: "https://lester-carpenter.lsystemworks.com/images/LSW-logo-800px.png"
+			}
+		</script>
+  <script src="../js/global.js" defer></script>
+  <script src="../js/rps.js" defer></script>
+</head>
+
+<body class="home">
+  <div class="page-wrap">
+    <header id="site-header" class="site-header container">
+      <a id="skip-nav" class="skip-to-content screen-reader-text" href="#main-content">Skip to main content</a>
+      <div class="logo-wrap"><a href="../"><span class="screen-reader-text">Site logo, Lester's HTML.</span><img
+            src="../images/etudes-logo-60px.png" alt="Lester's MDN assessments page logo, Lester's HTML."></a>
+      </div><!-- .logo-wrap -->
+
+      <nav class="main-nav">
+        <label for="menu-toggle"><span class="menu-toggle">menu</span></label>
+        <input type="checkbox" id="menu-toggle">
+
+        <ul class="nav-list-toggle">
+          <li class="nav-list__item"><a href="#">mdn</a>
+            <ul class="nav-list__item--nested-list">
+              <li class="nav-list__item"><a href="../mdn/mdn-html.html">html</a></li>
+              <li class="nav-list__item"><a href="../mdn/mdn-js.html">JavaScript</a></li>
+            </ul>
+          <li class="nav-list__item"><a href="#">Odin Project</a>
+            <ul class="nav-list__item--nested-list">
+              <li class="nav-list__item"><a href="../odin-project/flexbox-landing-page.html">Flexbox Landing Page</a></li>
+              <li class="nav-list__dropdown-item"><a href="../odin-project/fizzbuzz.html">FizzBuzz App</a></li>
+            </ul>
+          </li>
+          <li class="nav-list__item"><a href="../about-lester.html">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container">
+      <article id="rps" class="odin-rps">
+        <h1 class="main-title">Odin JS Assessment</h1>
+
+        <div class="post-wrapper">
+          <div class="article-body-wrap rps">
+            <p>Rock, Paper, Scissors App</p>
+            <p>Following the general <strong>Techniques and Principles of Problem Solving</strong> as I&apos;ve learned at <a href="https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/problem-solving">The Odin Project</a>, my first task to solve <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">this</a> coding challenge is to understand (to the best of my ability) the programming problem <em>before</em> writing any code. Here&apos;s a quick breakdown of each <a href="https://nostarch.com/thinklikeaprogrammer">principle</a> as it relates to this application.</p>
+            <h2>Plan</h2>
+            <p>Set achievable, intermediate goals and avoid random guessing.</p>
+            
+            <h2>Restate the Problem (Step by Step)</h2>
+            <p><code>computerPlay()</code> and <code>playRound()</code> functions.</p>
+            <p>To begin this exercise, users will play against the computer in the console (meaning no UI at this point). Start with a <strong>function</strong> called <span>computerPlay</span> which randomly returns either 'Rock', 'Paper', or 'Scissors' (RPS). Confirm it works with <span>console.log</span> before moving on.</p>
+            <ol>
+              <li>Define <span>computerPlay</span> function passing in <span>randoNum</span> variable which gets assigned to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random</a> global object property. This function, as its name implies, returns a random number that can easily be scaled.</li>
+              <li>Use <span>if else if</span> conditional or a <span>switch</span> statement to determine whether a number within a specific range has been returned and then <span>console.log</span> a corresponding selection based on it, e.g., 1-33 for rock; 34-66 for paper; and 67-100 for scissors.</li>
+              <li>The random number will be established by using the <span>Math.random</span> property.</li>
+            </ol>
+            <p>Next, write a function that plays one round of RPS, which takes two <strong>parameters</strong>, <span>playerSelection</span> and <span>computerSelection</span> and return a string declaring the winner such as "You lose! Paper beats Rock". Make the <span>playerSelection</span> case <em>insensitive</em> to account for various user inputs. Note: return the results of the function call (not just console.log()) and console.log the returned result.</p>
+            <h2>Start with What You Know</h2>
+            <p>While I'm not feeling <em>very</em> confident about writing the single round of RPS, here's what I know (or at least what I can test for):</p>
+            <ol>
+              <li>Can I write a bare-bones function that simply returns the results of the first function, computerPlay? This function essentially <em>is</em> the parameter for the second function as it returns a random number which is associated with one of the three choices, Rock Paper Scissors. Let's see... ok, yes that works. So, I know how to do that.</li>
+              <li>I know how to use conditionals to test T or F.</li>
+              <li>I need to use conditionals to determine what the humanSelection is and to compare it to the computerSelection.</li>
+              <li>Can I just assign computerSelect variable to the computerPlay function? Let's see... . Hmm, no errors but let's see what happens when I invoke <code>rps()</code> it... Yes, I can return the results from <span>computerPlay</span> function by assigning it to <span>computerSelection</span>.</li>
+              <li>I know how to use conditionals <span>if else</span> to test whether the <span>humanSelection</span> is equal to certain values. I'll do that now. </li>
+              <li>What inputs do I need?... 'rock', or 'paper', or 'scissors' from the user. So I need to figure out how to convert selection to a number ... do I? Do I need numbers in the <span>humanSelection</span> at all?</li>
+              <li>User enters 'rock'. If I've converted <span>computerPlay</span> to a string already then can't I just use conditionals to determine which won?</li>
+              <li>I know the results based on comparing both <span>humanSelectin</span> and <span>computerSelection</span>, so it should be fairly straight forward using <code>if else</code> statements.</li>
+              <li>Not going well. Will go back to returning result from computerPlay function.</li>
+              <li>I'm back to making some progress: I've got the RPS one-round function returning the result from the <code>computerPlay</code> function. One problem was that I wasn't using the <strong>keyword</strong> <code>return</code> to output the result and so... it wasn't returning anything. Go figure.</li>
+              <li>I also needed to return the result of <code>computerSelection</code> in the RPS function.</li>
+              <li>I'll see if I can get <code>humanSelection</code> to output and work on the conditionals for that and <code>computerPlay</code>.</li>
+              <li>Ok, I've got several different scenarios returning based on a hard-coded <code>humanSelection</code> and a few conditionals. Back on track!</li>
+              <li>Next, let's ensure that whatever the user inputs gets compared correctly, meaning I call <code>toLowerCase()</code> on the <code>humanSelection</code> variable.</li>
+              <li>Stopping for today. Will need to convert the <code>if else</code> to <code>switch</code> at some point.</li>
+            </ol>
+
+            <h2>Restate the Problem, Part 2</h2>
+            <p><code>game()</code> Function</p>
+            <p>Prompt the player for their choice (Rock, Paper, or Scissors) and save the result as the variable called <code>humanSelection</code>.</p>
+            <p>Put the <code>playRound()</code> function inside the <code>game()</code> function and loop through <code>playRound()</code> until either players has 5 wins, at which point the game ends. Declare the winner.</p>
+            <p>Not sure where I&apos;ll need to invoke <code>computerSelection</code> as <code>computerPlay</code>. </p>
+            <p>I don&apos;t understand how to build the functions separately and then piece them together.</p>
+            
+            <h3>What I (think) I Know</h3>
+            <p>The Loop</p>
+            <p>I&apos;ve done a <code>for</code> loop or two so I should be able to write one for RPS. Initiate a loop that loops through the <code>playRound()</code> function until either <code>humanSelection</code> or
+            <code>computerSelection</code> reaches 5 wins.</p>
+
+            <p>The Prompt</p>
+            <p>I've also done a few prompts before so I should be able to write one.</p>
+            <ul>
+              <li>Assign a variable equal to a <code>prompt</code> that asks for the <span>humanSelection</span>.</li>
+            </ul>
+            
+            <h4>My Progress (Step by Step)</h4>
+            <p>The <code>prompt</code></p>
+            <p>The Loop</p>
+            <ol>
+              <li>I completed a basic <code>for</code> loop which logs the "i" counter 5 times to the browser.</li>
+            </ol>
+          </div><!-- .article-body-wrap -->
+        </div><!-- .post-wrapper -->
+      </article>
+    </main>
+
+    <footer id="site-footer" class="colophon content-info">
+      <div class="inside-footer container">
+        <!-- <div class="contact-wrap"> -->
+        <address>
+          <ul class="home-contact-list">
+            <li class="home-contact-list__item"><a href="mailto:lsysworks@gmail.com"><img src="../images/gmail.png"
+                  alt="gmail icon to lsysworks@gmail.com" rel="noopener noreferrer"></a></li>
+            <li class="home-contact-list__item"><a href="https://twitter.com/self_teach_dev" target="_blank"
+                rel="noopener noreferrer"><img src="../images/twitter-white.png" alt="twitter icon @self_teach_dev"></a>
+            </li>
+            <li class="home-contact-list__item"><a href="https://www.facebook.com/lg.carpenter.94" target="_blank"
+                rel="noopener noreferrer"><img src="../images/f_logo_RGB-White_58.png" alt="facebook icon"></a></li>
+          </ul>
+        </address>
+        <!-- </div> -->
+        <!-- .contact-wrap -->
+        <p class="content-info__blog"><a href="https://lsystemworks.com" target="_blank"> Lester&apos;s System Works</a>
+        </p>
+        <p class="copyright"><small><span>copyright</span> &copy; <span class="date"></span></small></p>
+      </div><!-- #site-footer .colophon .content-info -->
+    </footer>
+  </div><!-- .page-wrap -->
+</body>
+</html>
