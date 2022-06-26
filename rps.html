@@ -83,68 +83,18 @@
 
     <main id="main-content" class="container">
       <article id="rps" class="odin-rps">
-        <h1 class="main-title">Odin JS Assessment</h1>
+        <h1 class="main-title">Rock Paper Scissors</h1>
 
         <div class="post-wrapper">
           <div class="article-body-wrap rps">
-            <p>Rock, Paper, Scissors App</p>
-            <p>Following the general <strong>Techniques and Principles of Problem Solving</strong> as I&apos;ve learned at <a href="https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/problem-solving">The Odin Project</a>, my first task to solve <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">this</a> coding challenge is to understand (to the best of my ability) the programming problem <em>before</em> writing any code. Here&apos;s a quick breakdown of each <a href="https://nostarch.com/thinklikeaprogrammer">principle</a> as it relates to this application.</p>
-            <h2>Plan</h2>
-            <p>Set achievable, intermediate goals and avoid random guessing.</p>
-            
-            <h2>Restate the Problem (Step by Step)</h2>
-            <p><code>computerPlay()</code> and <code>playRound()</code> functions.</p>
-            <p>To begin this exercise, users will play against the computer in the console (meaning no UI at this point). Start with a <strong>function</strong> called <span>computerPlay</span> which randomly returns either 'Rock', 'Paper', or 'Scissors' (RPS). Confirm it works with <span>console.log</span> before moving on.</p>
-            <ol>
-              <li>Define <span>computerPlay</span> function passing in <span>randoNum</span> variable which gets assigned to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random</a> global object property. This function, as its name implies, returns a random number that can easily be scaled.</li>
-              <li>Use <span>if else if</span> conditional or a <span>switch</span> statement to determine whether a number within a specific range has been returned and then <span>console.log</span> a corresponding selection based on it, e.g., 1-33 for rock; 34-66 for paper; and 67-100 for scissors.</li>
-              <li>The random number will be established by using the <span>Math.random</span> property.</li>
-            </ol>
-            <p>Next, write a function that plays one round of RPS, which takes two <strong>parameters</strong>, <span>playerSelection</span> and <span>computerSelection</span> and return a string declaring the winner such as "You lose! Paper beats Rock". Make the <span>playerSelection</span> case <em>insensitive</em> to account for various user inputs. Note: return the results of the function call (not just console.log()) and console.log the returned result.</p>
-            <h2>Start with What You Know</h2>
-            <p>While I'm not feeling <em>very</em> confident about writing the single round of RPS, here's what I know (or at least what I can test for):</p>
-            <ol>
-              <li>Can I write a bare-bones function that simply returns the results of the first function, computerPlay? This function essentially <em>is</em> the parameter for the second function as it returns a random number which is associated with one of the three choices, Rock Paper Scissors. Let's see... ok, yes that works. So, I know how to do that.</li>
-              <li>I know how to use conditionals to test T or F.</li>
-              <li>I need to use conditionals to determine what the humanSelection is and to compare it to the computerSelection.</li>
-              <li>Can I just assign computerSelect variable to the computerPlay function? Let's see... . Hmm, no errors but let's see what happens when I invoke <code>rps()</code> it... Yes, I can return the results from <span>computerPlay</span> function by assigning it to <span>computerSelection</span>.</li>
-              <li>I know how to use conditionals <span>if else</span> to test whether the <span>humanSelection</span> is equal to certain values. I'll do that now. </li>
-              <li>What inputs do I need?... 'rock', or 'paper', or 'scissors' from the user. So I need to figure out how to convert selection to a number ... do I? Do I need numbers in the <span>humanSelection</span> at all?</li>
-              <li>User enters 'rock'. If I've converted <span>computerPlay</span> to a string already then can't I just use conditionals to determine which won?</li>
-              <li>I know the results based on comparing both <span>humanSelectin</span> and <span>computerSelection</span>, so it should be fairly straight forward using <code>if else</code> statements.</li>
-              <li>Not going well. Will go back to returning result from computerPlay function.</li>
-              <li>I'm back to making some progress: I've got the RPS one-round function returning the result from the <code>computerPlay</code> function. One problem was that I wasn't using the <strong>keyword</strong> <code>return</code> to output the result and so... it wasn't returning anything. Go figure.</li>
-              <li>I also needed to return the result of <code>computerSelection</code> in the RPS function.</li>
-              <li>I'll see if I can get <code>humanSelection</code> to output and work on the conditionals for that and <code>computerPlay</code>.</li>
-              <li>Ok, I've got several different scenarios returning based on a hard-coded <code>humanSelection</code> and a few conditionals. Back on track!</li>
-              <li>Next, let's ensure that whatever the user inputs gets compared correctly, meaning I call <code>toLowerCase()</code> on the <code>humanSelection</code> variable.</li>
-              <li>Stopping for today. Will need to convert the <code>if else</code> to <code>switch</code> at some point.</li>
-            </ol>
+            <div class="button-wrap">
+              <button>Rock</button>
+              <button>Paper</button>
+              <button>Scissors</button>
+            </div>
 
-            <h2>Restate the Problem, Part 2</h2>
-            <p><code>game()</code> Function</p>
-            <p>Prompt the player for their choice (Rock, Paper, or Scissors) and save the result as the variable called <code>humanSelection</code>.</p>
-            <p>Put the <code>playRound()</code> function inside the <code>game()</code> function and loop through <code>playRound()</code> until either players has 5 wins, at which point the game ends. Declare the winner.</p>
-            <p>Not sure where I&apos;ll need to invoke <code>computerSelection</code> as <code>computerPlay</code>. </p>
-            <p>I don&apos;t understand how to build the functions separately and then piece them together.</p>
-            
-            <h3>What I (think) I Know</h3>
-            <p>The Loop</p>
-            <p>I&apos;ve done a <code>for</code> loop or two so I should be able to write one for RPS. Initiate a loop that loops through the <code>playRound()</code> function until either <code>humanSelection</code> or
-            <code>computerSelection</code> reaches 5 wins.</p>
 
-            <p>The Prompt</p>
-            <p>I've also done a few prompts before so I should be able to write one.</p>
-            <ul>
-              <li>Assign a variable equal to a <code>prompt</code> that asks for the <span>humanSelection</span>.</li>
-            </ul>
-            
-            <h4>My Progress (Step by Step)</h4>
-            <p>The <code>prompt</code></p>
-            <p>The Loop</p>
-            <ol>
-              <li>I completed a basic <code>for</code> loop which logs the "i" counter 5 times to the browser.</li>
-            </ol>
+
           </div><!-- .article-body-wrap -->
         </div><!-- .post-wrapper -->
       </article>
