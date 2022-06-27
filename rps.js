@@ -15,44 +15,55 @@ rpsBtns.forEach((button) => {
   button.addEventListener('click', playRound);
 });
 function playRound(e) {
-  humanSelection = e.target.textContent;
-  console.log(humanSelection)
-  // humanSelection = humanSelection.toLowerCase();
-// Is it possible to convert to an array (or is object better?) and loop through results?
+
+  let computerScore = 0;
+  let humanScore = 0;
+
+  const computerSelection = computerPlay();
+  humanSelection = e.target.textContent.toLowerCase();
+  const singleRoundResult = document.querySelector('.playRoundResult');
+
+  console.log(computerSelection)
+  // Is it possible to convert to an array (or is object better?) and loop through results?
+  // Would I even need an array?
   switch (true) {
     case humanSelection === 'rock' && computerSelection === 'rock':
-      console.log('It\'s a tie.');
+      const selectedBtn = document.querySelector('.button-wrap button');
+      // selectedBtn.style.cssText = 'background-color: #a41b5f;color: linen;border: solid #a41b5f 1px;border-radius:3px';
+      singleRoundResult.textContent = 'It\'s a tie.';
       break;
     case humanSelection === 'rock' && computerSelection === 'paper':
-      console.log(`${computerSelection} SMOTHERS ${humanSelection}`);
+      singleRoundResult.textContent = `${computerSelection} SMOTHERS ${humanSelection}`;
       computerScore++;
       break;
     case humanSelection === 'rock' && computerSelection === 'scissors':
-      console.log(`${humanSelection} CRUSHES ${computerSelection}`);
+        singleRoundResult.textContent = `${humanSelection} CRUSHES ${computerSelection}`;
       humanScore++;
       break;
-    
+      
     case humanSelection === 'paper' && computerSelection === 'paper':
-      console.log('It\'s a tie.');
+      singleRoundResult.textContent = `It\'s a tie.`;
       break;
     case humanSelection === 'paper' && computerSelection === 'scissors':
-      console.log(`${computerSelection} SLICES ${humanSelection}`);
+      singleRoundResult.textContent = `${computerSelection} SLICE ${humanSelection}`;
       computerScore++;
       break;
     case humanSelection === 'paper' && computerSelection === 'rock':
-      console.log(`${humanSelection} SMOTHERS ${computerSelection}`);
+      singleRoundResult.textContent = `${humanSelection} SMOTHERS ${computerSelection}`;
       humanScore++;
       break;
     
     case humanSelection === 'scissors' && computerSelection === 'scissors':
-      console.log('It\'s a tie.');
+      singleRoundResult.textContent = `It\'s a tie.`;
       break;
     case humanSelection === 'scissors' && computerSelection === 'rock':
-      console.log(`${computerSelection} CRUSHES ${humanSelection}`);
+      singleRoundResult.textContent = `${computerSelection} CRUSHES ${humanSelection}`;
+      // console.log(`${computerSelection} CRUSHES ${humanSelection}`);
       computerScore++;
       break;
     case humanSelection === 'scissors' && computerSelection === 'paper':
-      console.log(`${humanSelection} SLICES ${computerSelection}`);
+      singleRoundResult.textContent = `${humanSelection} SLICE ${computerSelection}`;
+      // console.log(`${humanSelection} SLICES ${computerSelection}`);
       humanScore++;
       break;
   }
@@ -67,6 +78,7 @@ function playRound(e) {
 //   console.log(`computerScore: ${computerScore}`);
 
 // return `${humanSelection} and ${computerSelection}`;
+  return humanSelection;
 } // playRound
 
 function computerPlay(randoNum) {
