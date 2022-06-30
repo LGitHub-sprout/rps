@@ -1,0 +1,219 @@
+/* 
+* Odin Project Page Styles Index
+* 
+* dom-manipulation.html
+* drumkit.html
+* loops.html
+* array-functions.html
+* rps.html, rps-ui.html
+* Reset
+*/
+
+/* dom-manipulation.html */
+.article-body-wrap.dom {
+  display: block;
+}
+#dom-item-lister,
+.dom-item-container {
+  max-width: 600px;
+  padding: 15px 20px;
+  border: solid 1px green;
+}
+#dom-item-lister {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: green;
+}
+.dom-item-container {
+  margin: 0 auto 2em;
+}
+#dom-item-lister > div h2 {
+  margin: 0 10px 0 0;
+  color: linen;
+}
+span.bold {
+  font-weight: bold;
+}
+.web-dev-simplified li {
+  list-style-type: circle;
+  line-height: 1.75em;
+}
+
+/* .dom-item-container {
+  margin: 2em 0;
+} */
+input[value="Submit"] {
+  margin-left: 10px;
+}
+.lister-app-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.lister-app-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: solid .25px #444;
+  padding: 10px;
+  margin: 0;
+  align-items: center;
+}
+li button {
+  background-color: red;
+  border-radius: 3px;
+  border: solid 1px #444;
+  color: linen;
+  cursor: pointer;
+}
+
+
+/* drumkit.html */
+#site-header {
+  flex: 0;
+}
+.home.drumkit {
+  background-image: url('../../images/odin-project-images/pexels-mantas-hesthaven-354304.jpg');
+  /* cover */
+  background-size: cover;
+  background-position: center;
+}
+header.odin-drumkit + #main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center; 
+}
+#drumkit small {
+  color: yellow;
+  /* text-align: center; */
+}
+.keys {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.key {
+  margin: 1em;
+  border: solid 3px #333;
+  background-color: rgba(0, 0, 0, .3);
+  padding: .5em;
+  text-align: center;
+  color: rgba(0, 255, 13, 0.7);
+  border-radius: 5px;
+  /* transition property name: like border or margin, etc */
+  /* transition-delay and -duration: in seconds or ms */
+  /* -timing-function: ease | ease-in | ease-out | ease-in-out */
+  transition: all 0.5s ease;
+  flex-basis: 60px;
+}
+.playing {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  border: solid 3px yellow;
+  transform: scale(1.1);
+}
+span.sound {
+  display: block;
+  margin-top: .5em;
+  font-size: 9px;
+}
+kbd {
+  font-size: 1.3em;
+  color: linen;
+}
+
+/* .search-form {
+  margin: 2em 0 0 40px;
+} */
+input#menu-toggle:focus {
+  border: 3px solid yellow;
+}
+.math {
+  display: block;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+/* array-functions.html */
+dt {
+  padding: .5rem 0;
+}
+dd {
+  padding-bottom: 1rem;
+}
+dt + span {
+  color: red;
+  display: block;
+  padding-bottom: 16px;
+}
+
+/* rps.html (Rock Paper Scissors) #a41b5f; LSW red */
+  /* Desktop */
+  @media screen and (min-width: 600px) {
+    .post-wrapper {
+      display: block;
+    }
+  }
+  #rps-ui {
+    margin: 0 auto;
+    border: solid 1px magenta;
+    height: 500px;
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* border: solid 3px magenta; */
+  }
+  .button-wrap button {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .rps-score {
+    text-align: center;
+    /* border: solid 1px magenta; */
+    margin: 0 0 1em 0;
+  }
+  .rps-score > p {
+    font-size: 1.25em;
+    margin-top: 0;
+  }
+  .rps-score span {
+    display: inline-block;
+    padding: 1em;
+  }
+  .play-round-result {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+  }
+
+
+  /* Mobile */
+  h2 {
+    text-align: center;
+  }
+  /* Desktop
+  @media screen and (min-width: 600px) {
+    .button-wrap {
+      display: flex;
+      justify-content: space-between;
+      border: solid 1px black;
+    }
+  }
+  /* Desktop
+  @media screen and (min-width: 600px) {
+    h2 {
+      Not sure I want align left
+      text-align: left;
+    }
+  }
+*/
