@@ -140,3 +140,122 @@ function computerPlay(randoNum) {
 //   console.log(choices[Math.floor(Math.random() * choices.length)]);
 // }
 // computer(); // randomly selects one of 3 choices array
+
+/*
+  From @coderman on TOP Discord
+  Incorporate the array and switch stmts for alt version.
+  
+  let score3= [];
+
+  //This generates a random choice, either rock paper or scissors 
+  function computerplay() {
+    let pcchoise = ["rock","paper","scissors"];
+    let rendom = Math.floor(Math.random()*pcchoise.length);
+
+    let numb = pcchoise[rendom];
+
+    // console.log('computerplay number: ', numb)
+    return numb;
+  }
+
+  let box1 = document.getElementById("box1");
+  box1.addEventListener("click", rockbtn);
+
+  function rockbtn(e) {
+    let computerchoice= computerplay();
+    // let container = document.querySelector(".cont1");
+    
+    console.log('computer choice: ', computerchoice)
+    console.log('event target button (human player choice): ', e.target.textContent)
+    
+    switch (computerchoice) {
+      case "rock":
+        let h52= document.createElement("h5");
+        h52.textContent="rock vs rock equals draw";
+        // container.appendChild(h52); 
+        let sum = score3++;
+        console.log('switch case: rock')
+        break;
+      case "paper":
+        let h53= document.createElement("h5");
+        h53.textContent="paper vs rock equals win for paper";
+        // container.appendChild(h53);
+        console.log('switch case: paper')
+        break;
+      case "scissors":
+        let h5= document.createElement("h5");
+        h5.textContent="rock vs scissors equals win for rock";
+        // container.appendChild(h5);
+        console.log('switch case: scissors')
+        break;
+    }
+  }
+
+  function paperbtn() {
+    let computerchoice= computerplay();
+    let container2 = document.querySelector(".cont2");
+
+    console.log(computerchoice)
+
+      switch(computerchoice) { 
+  
+          case "rock":
+        let h52= document.createElement("h5");
+          h52.textContent="rock vs paper equals win for paper";
+          container2.appendChild(h52);
+          break;
+          case "paper":
+          let h53= document.createElement("h5");
+            h53.textContent="paper vs paper equals draw";
+            container2.appendChild(h53);
+            break;
+  
+            case "scissors":
+              let h5= document.createElement("h5");
+              h5.textContent="scissors vs paper equals win for scissors";
+              container2.appendChild(h5);
+              break;
+      }
+  }
+  
+  let box2= document.getElementById("box2");
+  box2.addEventListener("click",paperbtn);
+
+  let box3= document.getElementById("box3");
+  box3.addEventListener("click",scissorsbtn);
+
+  function scissorsbtn() {
+
+    let computerchoice= computerplay();
+    let container3 = document.querySelector(".cont3");
+    
+    console.log(computerchoice)
+
+    switch (computerchoice) {
+      case "rock":
+      let h52= document.createElement("h5");
+        h52.textContent="scissors vs rock equals win for rock";
+        container3.appendChild(h52);
+        break;
+        case "paper":
+          let h53= document.createElement("h5");
+          h53.textContent="paper vs scissors equals win for scissors";
+          container3.appendChild(h53);
+          break;
+
+          case "scissors":
+              let h5= document.createElement("h5");
+              h5.textContent="scissors vs scissors equals draw";
+              container3.appendChild(h5);
+              break;
+      }
+  }
+
+  // let score = document.querySelector("#score");
+  // let addscore= document.createElement("h5");
+
+  // let scoretext= `The score is ${score3}`;
+  // addscore.textContent=scoretext;
+
+  // score.appendChild(addscore); 
+*/
